@@ -327,7 +327,7 @@ class BackdropPanel(QtWidgets.QDialog):
         self.slider_val.setValue(curhsv[2]*100)
         self.note_font_size_slider.setValue(self.bd['note_font_size'].getValue())
         if self.appearance_exists:
-            self.appearance_checkbox.setChecked(self.bd['appearance'].getValue())
+            self.appearance_checkbox.setChecked(int(self.bd['appearance'].getValue()))
         # set text color
         rgb = hex2rgb(self.bd_defaults['text_color'])
         hsv = rgb2hsv(rgb)
